@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>稚内市樺太記念館｜南樺太の歴史と暮らしを伝える無料の記念館</title>
+<meta name="description" content="稚内副港市場2階にある稚内市樺太記念館。全国樺太連盟から寄贈された約2,000点の資料で、南樺太の歴史と暮らしを伝えます。入館無料。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;700&family=Zen+Old+Mincho:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0f1a2b;
+  --ink-2:#16243a;
+  --gold:#b99a5b;
+  --gold-soft:#d6c192;
+  --paper:#ebe6da;
+  --paper-2:#dcd5c4;
+  --text:#2a2a28;
+  --serif:"Shippori Mincho","Zen Old Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--serif);color:var(--text);background:var(--paper);line-height:2;font-size:16px;letter-spacing:.04em}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+/* Hero */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;color:#f3ecda;background:var(--ink) url("images/image1.jpg") center/cover no-repeat;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,26,43,.55),rgba(15,26,43,.35) 40%,rgba(15,26,43,.85));z-index:-1}
+.hero-inner{display:flex;flex-direction:row-reverse;align-items:flex-start;gap:2.2rem;padding:4rem 1.5rem}
+.hero h1{writing-mode:vertical-rl;font-weight:700;font-size:clamp(2.2rem,6vw,4.2rem);letter-spacing:.35em;line-height:1.3;text-shadow:0 2px 20px rgba(0,0,0,.5)}
+.hero .sub{writing-mode:vertical-rl;font-size:clamp(.95rem,2vw,1.15rem);letter-spacing:.3em;color:var(--gold-soft);padding-top:1.2rem;line-height:1.8}
+.hero .free{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);font-size:.9rem;letter-spacing:.3em;border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);padding:.4rem 1.6rem;white-space:nowrap;color:var(--gold-soft)}
+
+/* Layout */
+section{padding:6rem 1.5rem}
+.wrap{max-width:960px;margin:0 auto}
+h2{font-weight:700;font-size:clamp(1.5rem,3.5vw,2rem);letter-spacing:.2em;text-align:center;margin-bottom:3rem}
+h2::after{content:"";display:block;width:56px;height:1px;background:var(--gold);margin:1.2rem auto 0}
+
+/* About */
+.about{background:var(--paper)}
+.about p{max-width:36em;margin:0 auto 1.6rem}
+.about .lead{font-size:clamp(1.15rem,2.6vw,1.45rem);text-align:center;line-height:2.1;margin-bottom:2.4rem}
+.about .stat{text-align:center;margin-top:3rem;font-size:.95rem}
+.about .stat b{display:block;font-size:3rem;font-weight:500;color:var(--ink);letter-spacing:.08em;line-height:1.3}
+
+/* Exhibits */
+.exhibits{background:var(--ink);color:#e9e2cf}
+.exhibits h2{color:#f3ecda}
+.exhibit{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;margin-bottom:5rem}
+.exhibit:last-child{margin-bottom:0}
+.exhibit.rev .pic{order:2}
+.pic{position:relative}
+.pic img{width:100%;aspect-ratio:4/3;object-fit:cover;filter:sepia(.25) contrast(.95)}
+.pic::after{content:"";position:absolute;inset:12px;border:1px solid rgba(214,193,146,.7);pointer-events:none}
+.exhibit h3{font-size:1.35rem;letter-spacing:.15em;color:var(--gold-soft);margin-bottom:1rem;font-weight:700}
+.exhibit p{font-size:.98rem;color:#d9d2bf}
+.list-only{max-width:640px;margin:0 auto;border-top:1px solid rgba(214,193,146,.4)}
+.list-only div{padding:1.6rem 0;border-bottom:1px solid rgba(214,193,146,.4)}
+.list-only h3{font-size:1.2rem;letter-spacing:.15em;color:var(--gold-soft);margin-bottom:.4rem}
+.list-only p{font-size:.98rem;color:#d9d2bf}
+
+/* Voices */
+.voices{background:var(--paper-2)}
+.voice{max-width:700px;margin:0 auto 2.4rem;padding:2.2rem 2.4rem;background:var(--paper);border-left:3px solid var(--gold)}
+.voice .stars{color:var(--gold);font-size:1.1rem;letter-spacing:.2em}
+.voice .date{font-size:.85rem;color:#6b665a;margin-left:.8rem}
+.voice p{margin-top:.8rem;font-size:.98rem}
+
+/* Info */
+.info{background:var(--paper)}
+dl{max-width:700px;margin:0 auto;border-top:1px solid var(--gold)}
+.row{display:grid;grid-template-columns:8.5em 1fr;gap:1rem;padding:1.2rem .4rem;border-bottom:1px solid var(--paper-2)}
+dt{font-weight:700;letter-spacing:.2em;color:var(--ink)}
+dd{word-break:break-word}
+dd a{text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:4px}
+
+/* Access */
+.access{background:var(--ink-2);color:#e9e2cf}
+.access h2{color:#f3ecda}
+.access address{font-style:normal;text-align:center;margin-bottom:2rem}
+.map{max-width:860px;margin:0 auto;border:1px solid var(--gold);padding:8px;background:var(--ink)}
+.map iframe{display:block;width:100%;height:420px;border:0;filter:sepia(.2) saturate(.85)}
+.btn-wrap{text-align:center;margin-top:2rem}
+.btn{display:inline-block;padding:1rem 3rem;background:var(--gold);color:var(--ink);text-decoration:none;font-weight:700;letter-spacing:.25em;border:1px solid var(--gold);transition:background .2s,color .2s}
+.btn:hover{background:transparent;color:var(--gold-soft)}
+
+/* Footer */
+footer{background:var(--ink);color:#cfc7b2;text-align:center;padding:4rem 1.5rem 3rem}
+footer .name{font-size:1.2rem;letter-spacing:.3em;color:#f3ecda;margin-bottom:1.4rem}
+footer .links{display:flex;gap:1.2rem;justify-content:center;align-items:center;margin-bottom:1.6rem;flex-wrap:wrap}
+footer .links a.text{font-size:.9rem;text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:4px}
+.sns{display:inline-flex;width:44px;height:44px;align-items:center;justify-content:center;border:1px solid var(--gold);border-radius:50%;color:var(--gold-soft);transition:background .2s,color .2s}
+.sns:hover{background:var(--gold);color:var(--ink)}
+.sns svg{width:20px;height:20px;fill:currentColor}
+footer small{font-size:.75rem;color:#8d8777}
+
+@media (max-width:760px){
+  section{padding:4.5rem 1.2rem}
+  .exhibit{grid-template-columns:1fr;gap:1.6rem;margin-bottom:4rem}
+  .exhibit.rev .pic{order:0}
+  .voice{padding:1.6rem 1.4rem}
+  .row{grid-template-columns:1fr;gap:.2rem}
+  .map iframe{height:320px}
+  .hero-inner{gap:1.4rem}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.sns{transition:none}}
+</style>
+</head>
+<body>
+
+<header class="hero" role="banner">
+  <div class="hero-inner">
+    <h1>稚内市樺太記念館</h1>
+    <p class="sub">国境のあった時代を、いまに伝える。</p>
+  </div>
+  <p class="free">入館無料</p>
+</header>
+
+<main>
+<section class="about" id="about">
+  <div class="wrap">
+    <h2>ご挨拶</h2>
+    <p class="lead">かつて、この海の向こうに<br>日本の国境がありました。</p>
+    <p>稚内市樺太記念館は、南樺太の歴史と人々の暮らしを伝える記念館です。明治以降の開拓の歩み、稚内と樺太を結んだ稚泊航路、大正・昭和の街の風景。ひとつひとつの資料が、あの時代の空気を静かに語りかけます。</p>
+    <p>展示の中心は、一般社団法人全国樺太連盟から寄贈された貴重な資料の数々。稚内市が収集を進め、稚内副港市場の2階に開館しました。どなたでも無料でご覧いただけます。</p>
+    <div class="stat"><b>約2,000点</b>南樺太の歴史と文化を伝える展示資料</div>
+  </div>
+</section>
+
+<section class="exhibits" id="exhibits">
+  <div class="wrap">
+    <h2>展示のご案内</h2>
+
+    <article class="exhibit">
+      <div class="pic"><img src="images/image2.jpg" alt="樺太記念館の展示" loading="lazy"></div>
+      <div>
+        <h3>稚泊航路の資料</h3>
+        <p>かつて稚内と樺太を結んでいた稚泊航路。その歴史をたどる船舶や桟橋駅の模型を展示しています。海を渡った人々の旅路に思いを巡らせてください。</p>
+      </div>
+    </article>
+
+    <article class="exhibit rev">
+      <div class="pic"><img src="images/image3.jpg" alt="大正・昭和の街並みを再現した展示" loading="lazy"></div>
+      <div>
+        <h3>大正・昭和の稚内の街並み</h3>
+        <p>1階では、旧豊原中学校の教室や当時の駅舎、昭和の街並みを再現。懐かしい風景のなかを歩きながら、当時の暮らしを身近に感じられます。</p>
+      </div>
+    </article>
+
+    <div class="list-only">
+      <div>
+        <h3>樺太関係の歴史資料</h3>
+        <p>全国樺太連盟からの寄贈品を含め、明治以降の樺太の開拓と生活を紹介するパネル、写真、書籍、収集品を約2,000点展示しています。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="voices" id="voices">
+  <div class="wrap">
+    <h2>お客様の声</h2>
+    <figure class="voice">
+      <span class="stars" aria-label="5段階中4">★★★★</span><span class="date">2023年9月</span>
+      <p>無料の博物館。入口で名前を記入して見学。樺太の日本の統治の歴史や遺物が展示してあります。映像作品や星空の写真展示もありました。資料は見応えがあり、楽しめました。</p>
+      <p>車のない場合、タクシーで上がり、帰路は「氷雪の門樺太島民慰霊碑」まで車道を下り、そこから北門神社までは遊歩道で下ると良いです。</p>
+    </figure>
+    <figure class="voice">
+      <span class="stars" aria-label="5段階中5">★★★★★</span>
+      <p>無料で樺太を学べる。日本に国境があった時代。国境には日露国境標石が置かれていた。レプリカが見られる。今でも当時の台座は残っているらしい。宮沢賢治は樺太を列車で旅して銀河鉄道の夜を書き上げたとも言われている。ガンダムコラボマンホールカードもらえる。実物も建物入口にあり。</p>
+    </figure>
+  </div>
+</section>
+
+<section class="info" id="info">
+  <div class="wrap">
+    <h2>施設案内</h2>
+    <dl>
+      <div class="row"><dt>施設名</dt><dd>稚内市樺太記念館</dd></div>
+      <div class="row"><dt>入館料</dt><dd>無料</dd></div>
+      <div class="row"><dt>定休日</dt><dd>年末年始（12月31日〜1月5日）<br>11月〜3月の毎週月曜日（祝日の場合は翌日）</dd></div>
+      <div class="row"><dt>住所</dt><dd>稚内市港1丁目6-28</dd></div>
+      <div class="row"><dt>電話番号</dt><dd><a href="tel:0162736066">0162-73-6066</a></dd></div>
+      <div class="row"><dt>公式サイト</dt><dd><a href="https://w-shinko.co.jp/hoppo-kinenkan/" target="_blank" rel="noopener">https://w-shinko.co.jp/hoppo-kinenkan/</a></dd></div>
+      <div class="row"><dt>お問い合わせ</dt><dd><a href="https://www.city.wakkanai.hokkaido.jp/inquiry/68.html" target="_blank" rel="noopener">お問い合わせフォーム</a></dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="access" id="access">
+  <div class="wrap">
+    <h2>アクセス</h2>
+    <address>稚内市港1丁目6-28　稚内副港市場2階</address>
+    <div class="map">
+      <iframe title="稚内市樺太記念館の地図" src="https://www.google.com/maps?q=%E7%A8%9A%E5%86%85%E5%B8%82%E6%A8%BA%E5%A4%AA%E8%A8%98%E5%BF%B5%E9%A4%A8%20%E7%A8%9A%E5%86%85%E5%B8%82%E6%B8%AF1%E4%B8%81%E7%9B%AE6-28&output=embed&hl=ja" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </div>
+    <div class="btn-wrap">
+      <a class="btn" href="https://www.google.com/maps/search/?api=1&query=%E7%A8%9A%E5%86%85%E5%B8%82%E6%A8%BA%E5%A4%AA%E8%A8%98%E5%BF%B5%E9%A4%A8%20%E7%A8%9A%E5%86%85%E5%B8%82%E6%B8%AF1%E4%B8%81%E7%9B%AE6-28" target="_blank" rel="noopener">地図を開く</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <p class="name">稚内市樺太記念館</p>
+  <div class="links">
+    <a class="sns" href="https://www.youtube.com/@%E5%8C%97%E6%96%B9%E8%A8%98%E5%BF%B5%E9%A4%A8" target="_blank" rel="noopener" aria-label="YouTube">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>
+    </a>
+    <a class="text" href="https://w-shinko.co.jp/hoppo-kinenkan/" target="_blank" rel="noopener">公式サイト</a>
+    <a class="text" href="https://www.city.wakkanai.hokkaido.jp/inquiry/68.html" target="_blank" rel="noopener">お問い合わせ</a>
+  </div>
+  <small>&copy; 稚内市樺太記念館</small>
+</footer>
+
+</body>
+</html>
